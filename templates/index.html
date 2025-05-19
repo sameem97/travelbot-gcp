@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Buddy Agent</title>
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Basic font for the page */
+            margin: 0;
+            padding: 20px;
+            background-color: #e9ecef; /* Light grey background */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Full viewport height */
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff; /* White background for content container */
+            padding: 30px 40px;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+            max-width: 700px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #007bff; /* Blue heading color */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Styles for the Dialogflow Messenger */
+        df-messenger {
+            z-index: 999;
+            position: fixed;
+            /* Customizations for the chat bubble provided by the user */
+            --df-messenger-font-color: #000000; /* Black font color */
+            --df-messenger-font-family: Google Sans, sans-serif; /* Google Sans font */
+            --df-messenger-chat-background: #f3f6fc; /* Light blue-grey chat background */
+            --df-messenger-message-user-background: #d3e3fd; /* Light blue user message background */
+            --df-messenger-message-bot-background: #ffffff; /* White bot message background */
+            bottom: 16px;
+            right: 16px;
+            border-radius: 16px; /* Rounded corners for the chat window itself */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Enhanced shadow for better visibility */
+        }
+
+        /* Styling the chat bubble button itself */
+        df-messenger-chat-bubble {
+            /*
+            Note: Direct styling of the inner button of df-messenger-chat-bubble
+            might be limited. The primary way to style is via the CSS variables
+            provided by Dialogflow Messenger.
+            However, we can ensure the container itself has a nice look if needed.
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Travel Buddy Agent Page!</h1>
+        <p>
+            This is a sample Flask application demonstrating how to integrate
+            a Vertex AI agent using the Dialogflow Messenger snippet.
+        </p>
+        <p>
+            You should see the "Travel Buddy" chat icon in the bottom right corner.
+            Click on it to start interacting with the agent.
+        </p>
+    </div>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
+    <df-messenger
+      project-id="gen-lang-client-0769189716"
+      agent-id="51591492-0764-44f4-b96f-599df9dffd19"
+      language-code="en"
+      max-query-length="-1">
+      <df-messenger-chat-bubble
+        chat-title="Travel Buddy">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+
+</body>
+</html>
